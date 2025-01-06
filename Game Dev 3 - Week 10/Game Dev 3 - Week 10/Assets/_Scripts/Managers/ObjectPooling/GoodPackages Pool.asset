@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c983ca6f8d9a5dd42bba0da1c00bcbbd, type: 3}
   m_Name: GoodPackages Pool
   m_EditorClassIdentifier: 
-  pooledObjectContainer: []
-  poolAmount: 40
-  poolItem: {fileID: 0}
+  poolAmount: 50
+  poolItem: {fileID: 6953169502706892445, guid: fd5f7ca403eb6d843bae5ffab6f76cd2,
+    type: 3}

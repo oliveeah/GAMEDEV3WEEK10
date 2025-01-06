@@ -13,6 +13,10 @@ namespace GameDevWithMarco.Player
         private Ripple ripple;
         public UIManager ui;
 
+        [SerializeField] GameEvent GoodPackageCollected;
+        [SerializeField] GameEvent BadPackageCollected;
+        [SerializeField] GameEvent LifePackageCollected;
+
         //Variables
         public bool greenCollected = false;
 
@@ -24,14 +28,15 @@ namespace GameDevWithMarco.Player
         public void OnTriggerEnter2D(Collider2D collision)
         {
             ExecuteLogicBasedOnWhatWeHaveCollidedWith(collision);
-            Destroy(collision.gameObject);
-        }
+            collision.gameObject.SetActive(false);
+            }
 
         private void ExecuteLogicBasedOnWhatWeHaveCollidedWith(Collider2D collision)
         {
             switch (collision.gameObject.tag)
             {
                 case "GoodBox":
+                    GoodPackageCollected.Raise();
                     GameManager.Instance.GreenPackLogic();
                     vfx.GoodPickupParticles();
                     vfx.AddPointsPromptMethod();
@@ -40,6 +45,7 @@ namespace GameDevWithMarco.Player
                     greenCollected = true;
                     break;
                 case "BadBox":
+                    BadPackageCollected.Raise();
                     GameManager.Instance.RedPackLogic();
                     vfx.CamShake();
                     vfx.BadPickupParticles();
@@ -48,6 +54,7 @@ namespace GameDevWithMarco.Player
                     AudioManager.Instance.BadPickupSound();
                     break;
                 case "LifeBox":
+                    LifePackageCollected.Raise();
                     GameManager.Instance.lives++;
                     ripple.RippleReaction();
                     ui.PlusOneLifeFeedback();

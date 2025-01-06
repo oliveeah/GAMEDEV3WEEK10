@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c983ca6f8d9a5dd42bba0da1c00bcbbd, type: 3}
   m_Name: LifePackages Pool
   m_EditorClassIdentifier: 
-  pooledObjectContainer: []
-  poolAmount: 40
-  poolItem: {fileID: 0}
+  poolAmount: 50
+  poolItem: {fileID: 1672529824157174036, guid: ce14d5e697e1c7e40ab54f2a57253a55,
+    type: 3}

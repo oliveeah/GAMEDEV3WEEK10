@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using GameDevWithMarco.DesignPattern;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,22 @@ namespace GameDevWithMarco.Packages
 
     public class FallenObjectsSpawner : MonoBehaviour
     {
-        //Referencing Gameobjects
+        [Header("Packages Spawn Position")]
+        [SerializeField] GameObject[] spawners;
+        [Header("Packages Delay Variables")]
+        [SerializeField] float initialDelay = 2.0f;
+        [SerializeField] float minDelay = 0.5f;
+        [SerializeField] float delayIncreaseRata = 0.1f;
+        float currentDelay;
+        [Header("Packages Drop Chance Percentages")]
+        [SerializeField] float goodPackageDropPercentage;
+        [SerializeField] float badPackageDropPercentage;
+        [SerializeField] float LifePackageDropPercentage;
+        [SerializeField] float minimum_GoodPackagePercentage;
+        [SerializeField] float maximum_BaddPackageDropPercentage;
+        [SerializeField] float percentageChangeRatio = 0.1f;
+
+    /*    //Referencing Gameobjects
         public GameObject[] spawners;
         public GameObject[] packages;
         //Timer Method Variables
@@ -21,24 +37,84 @@ namespace GameDevWithMarco.Packages
         public bool hasBeenDeployed = false;
         public bool amIaGoodPackage = false;
         public float timerForLife = 15f;
-        public GameObject lifePackage;
+        public GameObject lifePackage;*/
 
 
         void Start()
         {
-            InitialisationParameters();
+            StartCoroutine(SpawningLoop());
         }
 
         // Update is called once per frame
         void Update()
         {
-            DeployLife();
+         /*   DeployLife();
             Countdown();
             AdaptiveDifficulty();
             countdown = Mathf.Clamp(countdown, 0, 10);
-            timerForLife -= Time.deltaTime;
+            timerForLife -= Time.deltaTime;*/
         }
-        private void InitialisationParameters()
+
+        private void SpawnPackageAtRandomLocation(ObjectPoolingPattern.TypeOfPool poolType)
+        {
+            GameObject spawnedPackage = ObjectPoolingPattern.Instance.GetPoolItem(poolType);
+            int randomInteger = Random.Range(0, spawners.Length-1);
+            Vector2 spawnPosition = spawners[randomInteger].transform.position;
+            spawnedPackage.transform.position = spawnPosition;
+        }
+
+        private IEnumerator SpawningLoop()
+        {
+
+
+            SpawnPackageAtRandomLocation(GetPackageTypeBasedOnPercentage());
+            yield return new WaitForSeconds(currentDelay);
+            currentDelay -= delayIncreaseRata;
+            if (currentDelay < minDelay) currentDelay = minDelay;
+            StartCoroutine(SpawningLoop());
+        }
+
+        private ObjectPoolingPattern.TypeOfPool GetPackageTypeBasedOnPercentage()
+        {
+            float randomValue = Random.Range(0f, 100.1f);
+            if(randomValue <= goodPackageDropPercentage) 
+            {
+                return ObjectPoolingPattern.TypeOfPool.Good;
+            }
+            else if(randomValue > goodPackageDropPercentage && randomValue <= (goodPackageDropPercentage + badPackageDropPercentage))
+            {
+                return ObjectPoolingPattern.TypeOfPool.Bad;
+            }
+            else
+            {
+                return ObjectPoolingPattern.TypeOfPool.Life;
+            }
+        }
+
+        private void CapThePercentages()
+        {
+            if(goodPackageDropPercentage <= minimum_GoodPackagePercentage & badPackageDropPercentage >= maximum_BaddPackageDropPercentage)
+            {
+                goodPackageDropPercentage = minimum_GoodPackagePercentage;
+                badPackageDropPercentage = maximum_BaddPackageDropPercentage;
+            }
+        }
+
+        public void GrowBadPercentage()
+        {
+            goodPackageDropPercentage -= percentageChangeRatio;
+            badPackageDropPercentage -= percentageChangeRatio;
+            CapThePercentages();
+        }
+
+        public void GrowGoodPercentage()
+        {
+            goodPackageDropPercentage += percentageChangeRatio;
+            badPackageDropPercentage -= percentageChangeRatio;
+            CapThePercentages();
+        }
+
+        /*private void InitialisationParameters()
         {
             countdown = Mathf.Clamp(timer, 0, 10);
         }
@@ -347,7 +423,7 @@ namespace GameDevWithMarco.Packages
                     timer = 0.10f;
                 }
             }
-        }
+        }*/
 
     }
 
