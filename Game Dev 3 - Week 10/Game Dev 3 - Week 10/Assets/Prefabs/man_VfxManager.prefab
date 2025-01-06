@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3312338274814803727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3312338274814803721}
+  - component: {fileID: 3312338274814803720}
+  - component: {fileID: 3312338274814803722}
+  m_Layer: 0
+  m_Name: man_VfxManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3312338274814803721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3312338274814803727}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4851686, y: 0.5821421, z: -13.569956}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3312338274814803720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3312338274814803727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1d5ba75537de249b6640f657aeb10d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camAnim: {fileID: 0}
+  goodPickupParticles: {fileID: 4413541834135396060, guid: 43fc04130a956be4380db946a25b60f5,
+    type: 3}
+  badPickupParticles: {fileID: 3057727224863282854, guid: c23fb37b84bafc54fa367c0623319765,
+    type: 3}
+  particleSpawnerPos: {fileID: 0}
+  subtractPointsPrompt: {fileID: 5021027811521718671, guid: 3ac2798c00cfd4c449d8b09d57692a8a,
+    type: 3}
+  addPointsPrompt: {fileID: 965950144765723507, guid: 8f4a10ecf22bd9e468b1f99db9768d06,
+    type: 3}
+  subtractPointsPromptPosition: {fileID: 0}
+  addPointsPromptPosition: {fileID: 0}
+  glitch: {fileID: 0}
+  gameManager: {fileID: 0}
+  glitchEnd: 2
+  glitchStageFour: 0.04
+  glitchStageThree: 0.03
+  glitchStageTwo: 0.02
+  glitchStageOne: 0.01
+  glitchZero: 0
+--- !u!95 &3312338274814803722
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3312338274814803727}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 73488d280084bc74d8eb86bf3228e01b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
