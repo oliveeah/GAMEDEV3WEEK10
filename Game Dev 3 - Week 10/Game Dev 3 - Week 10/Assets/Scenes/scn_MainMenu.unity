@@ -394,6 +394,9 @@ GameObject:
   - component: {fileID: 605593228}
   - component: {fileID: 605593231}
   - component: {fileID: 605593230}
+  - component: {fileID: 605593234}
+  - component: {fileID: 605593233}
+  - component: {fileID: 605593232}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -627,6 +630,90 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &605593232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605593226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b156b310ef7874480e7bf7c59e3dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 3601526b17d525840826930bb0d3e3aa, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 605593230}
+        m_TargetAssemblyTypeName: GameDevWithMarco.Managers.AudioManager, Assembly-CSharp
+        m_MethodName: LifePickupSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &605593233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605593226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b156b310ef7874480e7bf7c59e3dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 76aff4dee7173a542acfea99d3024966, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 605593230}
+        m_TargetAssemblyTypeName: GameDevWithMarco.Managers.AudioManager, Assembly-CSharp
+        m_MethodName: BadPickupSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &605593234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605593226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b156b310ef7874480e7bf7c59e3dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a62e5990e2e076d40927fdacd3bbab2f, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 605593230}
+        m_TargetAssemblyTypeName: GameDevWithMarco.Managers.AudioManager, Assembly-CSharp
+        m_MethodName: GoodPickupSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &676165719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,8 +1651,122 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4817018119564171572, guid: 8b35cd8ebf17bfa4aaf83b6304ea4fcf,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2051401820}
+    - targetCorrespondingSourceObject: {fileID: 4817018119564171572, guid: 8b35cd8ebf17bfa4aaf83b6304ea4fcf,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2051401819}
+    - targetCorrespondingSourceObject: {fileID: 4817018119564171572, guid: 8b35cd8ebf17bfa4aaf83b6304ea4fcf,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2051401818}
   m_SourcePrefab: {fileID: 100100000, guid: 8b35cd8ebf17bfa4aaf83b6304ea4fcf, type: 3}
+--- !u!1 &2051401816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4817018119564171572, guid: 8b35cd8ebf17bfa4aaf83b6304ea4fcf,
+    type: 3}
+  m_PrefabInstance: {fileID: 2051401815}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2051401817 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4817018119564171570, guid: 8b35cd8ebf17bfa4aaf83b6304ea4fcf,
+    type: 3}
+  m_PrefabInstance: {fileID: 2051401815}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051401816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f287cd061e9a3247a8651a9cc003c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2051401818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051401816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b156b310ef7874480e7bf7c59e3dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 3601526b17d525840826930bb0d3e3aa, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2051401817}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: LifePackLogic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2051401819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051401816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b156b310ef7874480e7bf7c59e3dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 76aff4dee7173a542acfea99d3024966, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2051401817}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: RedPackLogic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2051401820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051401816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b156b310ef7874480e7bf7c59e3dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a62e5990e2e076d40927fdacd3bbab2f, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2051401817}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: GreenPackLogic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1078721436947016534
 PrefabInstance:
   m_ObjectHideFlags: 0
