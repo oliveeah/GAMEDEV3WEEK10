@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 13859
+  controlID: 16377
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -93,7 +93,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 13860
+  controlID: 16378
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 13861
+  controlID: 16379
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -239,9 +239,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d26afaff
+      m_SelectedIDs: b6620000
       m_LastClickedID: 0
-      m_ExpandedIDs: f06afaff506ffaff0274faff9c80faff0a5ffbff8ea0fbffda1dfcff9a7dfcffe87dfcffb27efcfff67ffcffc680fcff4c8ffcffa699fcff00a3fcff00a5fcff56a6fcff94e7fcfff8f9ffff08faffff584f0000
+      m_ExpandedIDs: aeb2f7ff80d5f7ff5c93f8ff8624f9fff06afaff506ffaff0274faff9c80faff0a5ffbff8ea0fbffda1dfcff9a7dfcffe87dfcffb27efcfff67ffcffc680fcff4c8ffcffa699fcff00a3fcff00a5fcff56a6fcff94e7fcfff8f9ffff08faffff584f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 13941
+  controlID: 16457
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -851,7 +851,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Scripts/Managers
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -859,7 +859,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 75
   m_LastFolders:
-  - Assets/_Scripts/Managers
+  - Assets/Scenes
   m_LastFoldersGridSize: 75
   m_LastProjectPath: C:\Users\linda\Desktop\GAMEDEV3WEEK10\GAMEDEV3WEEK10\Game Dev
     3 - Week 10\Game Dev 3 - Week 10
@@ -867,8 +867,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 10510000
-    m_LastClickedID: 20752
+    m_SelectedIDs: 26510000
+    m_LastClickedID: 20774
     m_ExpandedIDs: 00000000ec500000ee500000f0500000f2500000f4500000f650000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -922,8 +922,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: d26afaff
-    m_LastClickedInstanceID: -365870
+    m_SelectedInstanceIDs: b6620000
+    m_LastClickedInstanceID: 25270
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300001e8e00005a8d0000a49100007a8e000016600000d0a30000989f0000e4660000
     m_RenameOverlay:
@@ -1052,7 +1052,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -365870
+  m_LastSelectedObjectID: 40114
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
