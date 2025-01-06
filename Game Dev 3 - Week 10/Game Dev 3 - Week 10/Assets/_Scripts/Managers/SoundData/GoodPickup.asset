@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34916fabc320e9b41982fb77a306c26e, type: 3}
   m_Name: GoodPickup
   m_EditorClassIdentifier: 
-  minPitchValue: 0
-  maxPitchValue: 0
-  clipToUse: {fileID: 0}
-  soundVolume: 0
+  minPitchValue: 0.9
+  maxPitchValue: 1.1
+  clipToUse: {fileID: 8300000, guid: ea71a12d0075eab4e99db87a7236ffe6, type: 3}
+  soundVolume: 1

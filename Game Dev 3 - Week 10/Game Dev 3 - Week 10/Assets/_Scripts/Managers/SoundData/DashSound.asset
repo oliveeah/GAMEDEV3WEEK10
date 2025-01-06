@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34916fabc320e9b41982fb77a306c26e, type: 3}
   m_Name: DashSound
   m_EditorClassIdentifier: 
-  minPitchValue: 0
-  maxPitchValue: 0
-  clipToUse: {fileID: 0}
-  soundVolume: 0
+  minPitchValue: 0.7
+  maxPitchValue: 1
+  clipToUse: {fileID: 8300000, guid: a8dac4babf12e514dbdd1dd0c67e55ea, type: 3}
+  soundVolume: 0.1
